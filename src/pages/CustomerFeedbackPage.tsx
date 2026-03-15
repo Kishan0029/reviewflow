@@ -224,10 +224,10 @@ export default function CustomerFeedbackPage() {
 
               {/* Phone */}
               <div className="mb-6">
-                <h3 className="text-[#202124] text-[15px] font-medium mb-2">Would you like the manager to contact you?</h3>
+                <h3 className="text-[#202124] text-[15px] font-medium mb-2">We'd love to make this right for you - share your number so we can reach you.</h3>
                 <input
                   type="tel"
-                  placeholder="Phone number (optional)"
+                  placeholder="Phone number (to resolve this issue)"
                   value={phone}
                   onChange={e => setPhone(e.target.value)}
                   className="w-full border border-[#DADCE0] rounded-lg p-3 text-[14px] text-[#202124] placeholder:text-[#9AA0A6] focus:outline-none focus:border-[#1A73E8] focus:ring-1 focus:ring-[#1A73E8] mb-1"
