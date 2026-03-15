@@ -33,29 +33,35 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen bg-[#F8F9FA] flex flex-col md:flex-row font-sans text-[#202124]">
       {/* Mobile Header */}
-      <div className="md:hidden flex items-center justify-between p-4 bg-white border-b border-[#E0E0E0] sticky top-0 z-20">
+      <div className="md:hidden flex items-center justify-between px-4 py-3 bg-white border-b border-[#E0E0E0] sticky top-0 z-30">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-[#1A73E8] rounded-lg flex items-center justify-center">
             <Star size={15} className="text-white fill-white" />
           </div>
-          <span className="font-semibold text-lg">ReviewFlow</span>
+          <span className="font-semibold text-lg text-[#202124]">ReviewFlow</span>
         </div>
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-[#5F6368]">
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        <button onClick={() => setIsMobileMenuOpen(true)} className="p-2 text-[#5F6368] hover:bg-[#F8F9FA] rounded-md transition-colors">
+          <Menu size={24} />
         </button>
       </div>
 
       {/* Sidebar */}
       <aside className={cn(
-        'fixed inset-y-0 left-0 z-30 w-60 bg-white border-r border-[#E0E0E0] transform transition-transform duration-200 ease-in-out md:translate-x-0 md:static md:flex md:flex-col',
-        isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        'fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-[#E0E0E0] transform transition-transform duration-200 ease-in-out md:translate-x-0 md:static md:w-60 md:flex md:flex-col',
+        isMobileMenuOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
       )}>
-        {/* Logo */}
-        <div className="hidden md:flex items-center gap-2 px-5 py-5 border-b border-[#E0E0E0]">
-          <div className="w-8 h-8 bg-[#1A73E8] rounded-lg flex items-center justify-center">
-            <Star size={15} className="text-white fill-white" />
+        {/* Logo area */}
+        <div className="flex items-center justify-between px-5 py-4 min-h-[60px] border-b border-[#E0E0E0]">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-[#1A73E8] rounded-lg flex items-center justify-center">
+              <Star size={15} className="text-white fill-white" />
+            </div>
+            <span className="font-bold text-lg tracking-tight text-[#202124]">ReviewFlow</span>
           </div>
-          <span className="font-bold text-lg tracking-tight">ReviewFlow</span>
+          {/* Mobile close button */}
+          <button onClick={() => setIsMobileMenuOpen(false)} className="md:hidden p-2 -mr-2 text-[#5F6368] hover:bg-[#F8F9FA] rounded-md">
+            <X size={20} />
+          </button>
         </div>
 
         {/* Nav */}

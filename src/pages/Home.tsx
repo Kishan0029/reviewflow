@@ -40,19 +40,19 @@ export default function Home() {
 
       {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-[#E8EAED]">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-[#1A73E8] rounded-lg flex items-center justify-center">
               <Star size={16} className="text-white fill-white" />
             </div>
             <span className="font-bold text-[#202124] text-lg tracking-tight">ReviewFlow</span>
           </Link>
-          <div className="flex items-center gap-3">
-            <Link to="/login" className="text-sm font-medium text-[#5F6368] hover:text-[#202124] transition px-4 py-2 rounded-lg hover:bg-[#F8F9FA]">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link to="/login" className="hidden sm:inline-flex text-sm font-medium text-[#5F6368] hover:text-[#202124] transition px-4 py-2 rounded-lg hover:bg-[#F8F9FA]">
               Sign in
             </Link>
-            <Link to="/signup" className="text-sm font-medium bg-[#1A73E8] hover:bg-[#1557B0] text-white px-5 py-2 rounded-full transition">
-              Get started free
+            <Link to="/signup" className="text-sm font-medium bg-[#1A73E8] hover:bg-[#1557B0] text-white px-4 py-2 sm:px-5 rounded-full transition whitespace-nowrap">
+              Get started <span className="hidden sm:inline ml-1">free</span>
             </Link>
           </div>
         </div>
