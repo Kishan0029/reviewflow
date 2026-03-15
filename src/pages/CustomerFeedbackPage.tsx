@@ -193,6 +193,14 @@ export default function CustomerFeedbackPage() {
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <span className="text-[18px] font-medium text-[#202124]">{location?.name}</span>
+              <a
+                href={`https://search.google.com/local/writereview?placeid=${location?.google_place_id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[12px] text-[#9AA0A6] hover:underline hover:text-[#1A73E8] transition-colors"
+              >
+                Google Review
+              </a>
             </div>
 
             <form onSubmit={handleNegativeSubmit}>
