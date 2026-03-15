@@ -137,7 +137,7 @@ export default function Home() {
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {PRICING.map(plan => (
-              <div key={plan.name} className={`rounded-2xl p-8 border ${plan.highlight ? 'bg-[#1A73E8] border-[#1A73E8] text-white shadow-xl shadow-[#1A73E8]/20' : 'bg-white border-[#E8EAED]'}`}>
+              <div key={plan.name} className={`flex flex-col rounded-2xl p-8 border ${plan.highlight ? 'bg-[#1A73E8] border-[#1A73E8] text-white shadow-xl shadow-[#1A73E8]/20' : 'bg-white border-[#E8EAED]'}`}>
                 <p className={`text-sm font-medium mb-2 ${plan.highlight ? 'text-blue-200' : 'text-[#5F6368]'}`}>{plan.name}</p>
                 <div className="flex items-baseline gap-1 mb-1">
                   <span className="text-4xl font-bold">{plan.price}</span>
@@ -153,7 +153,7 @@ export default function Home() {
                 </ul>
                 <Link
                   to="/signup"
-                  className={`block text-center font-medium py-3 rounded-xl text-sm transition ${plan.highlight ? 'bg-white text-[#1A73E8] hover:bg-blue-50' : 'bg-[#1A73E8] text-white hover:bg-[#1557B0]'}`}
+                  className={`mt-auto block text-center font-medium py-3 rounded-xl text-sm transition ${plan.highlight ? 'bg-white text-[#1A73E8] hover:bg-blue-50' : 'bg-[#1A73E8] text-white hover:bg-[#1557B0]'}`}
                 >
                   {plan.cta}
                 </Link>
