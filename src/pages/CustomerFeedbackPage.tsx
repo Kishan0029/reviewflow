@@ -199,7 +199,7 @@ export default function CustomerFeedbackPage() {
                 rel="noopener noreferrer"
                 className="text-[12px] text-[#9AA0A6] hover:text-[#1A73E8] transition-colors"
               >
-                Google Review
+                Review us on google
               </a>
             </div>
 
