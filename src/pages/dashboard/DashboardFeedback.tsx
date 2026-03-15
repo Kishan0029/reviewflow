@@ -162,14 +162,22 @@ export default function DashboardFeedback() {
                   {/* Actions */}
                   <div className="flex gap-2 flex-wrap md:flex-col md:items-end">
                     {fb.customer_phone && (
-                      <a
-                        href={`https://wa.me/${fb.customer_phone.replace(/[^0-9]/g, '')}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-xs font-medium text-[#128C7E] border border-[#128C7E]/30 bg-[#E7F7F5] hover:bg-[#D4F1ED] px-3 py-1.5 rounded-lg transition"
-                      >
-                        <MessageSquare size={13} /> WhatsApp
-                      </a>
+                      <div className="flex items-center gap-2">
+                        <a
+                          href={`tel:${fb.customer_phone.replace(/[^0-9]/g, '')}`}
+                          className="flex items-center gap-1.5 text-xs font-medium text-[#1A73E8] border border-[#1A73E8]/30 bg-[#E8F0FE] hover:bg-[#D2E3FC] px-3 py-1.5 rounded-lg transition"
+                        >
+                          <Phone size={13} /> Call
+                        </a>
+                        <a
+                          href={`https://wa.me/${fb.customer_phone.replace(/[^0-9]/g, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 text-xs font-medium text-[#128C7E] border border-[#128C7E]/30 bg-[#E7F7F5] hover:bg-[#D4F1ED] px-3 py-1.5 rounded-lg transition"
+                        >
+                          <MessageSquare size={13} /> WhatsApp
+                        </a>
+                      </div>
                     )}
                     <button
                       onClick={() => toggleResolved(fb.id, fb.resolved)}
