@@ -1,0 +1,5 @@
+{
+  "name": "ReviewFlow",
+  "description": "SaaS product to collect customer feedback through QR codes and convert positive experiences into Google reviews.",
+  "requestFramePermissions": []
+}
