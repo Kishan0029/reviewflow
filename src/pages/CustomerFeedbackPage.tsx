@@ -197,7 +197,7 @@ export default function CustomerFeedbackPage() {
                 href={`https://search.google.com/local/writereview?placeid=${location?.google_place_id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[12px] text-[#9AA0A6] hover:underline hover:text-[#1A73E8] transition-colors"
+                className="text-[12px] text-[#9AA0A6] hover:text-[#1A73E8] transition-colors"
               >
                 Google Review
               </a>
