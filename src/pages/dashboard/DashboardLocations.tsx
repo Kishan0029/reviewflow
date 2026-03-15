@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTitle } from '@/hooks/useTitle';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/context/AuthContext';
 import { Location, Business } from '@/types';
@@ -13,6 +14,7 @@ function slugify(text: string): string {
 const APP_URL = typeof window !== 'undefined' ? window.location.origin : 'https://reviewflow.app';
 
 export default function DashboardLocations() {
+  useTitle('Locations');
   const { user } = useAuth();
   const [locations, setLocations] = useState<Location[]>([]);
   const [business, setBusiness] = useState<Business | null>(null);

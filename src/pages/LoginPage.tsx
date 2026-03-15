@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTitle } from '@/hooks/useTitle';
 import { supabase } from '@/lib/supabase';
 import { Eye, EyeOff, Star } from 'lucide-react';
 
 export default function LoginPage() {
+  useTitle('Sign In');
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

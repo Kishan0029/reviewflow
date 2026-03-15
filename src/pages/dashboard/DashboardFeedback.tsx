@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTitle } from '@/hooks/useTitle';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/context/AuthContext';
 import { Feedback, Location } from '@/types';
@@ -18,6 +19,7 @@ const ISSUE_COLORS: Record<string, string> = {
 };
 
 export default function DashboardFeedback() {
+  useTitle('Feedback');
   const { user } = useAuth();
   const [items, setItems] = useState<FeedbackWithLocation[]>([]);
   const [loading, setLoading] = useState(true);

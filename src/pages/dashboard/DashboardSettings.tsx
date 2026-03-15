@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTitle } from '@/hooks/useTitle';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/context/AuthContext';
 import { Business } from '@/types';
@@ -6,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { CheckCircle2 } from 'lucide-react';
 
 export default function DashboardSettings() {
+  useTitle('Settings');
   const { user, profile } = useAuth();
   const [business, setBusiness] = useState<Business | null>(null);
   const [name, setName] = useState('');

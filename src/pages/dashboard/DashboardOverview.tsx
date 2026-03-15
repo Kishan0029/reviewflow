@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTitle } from '@/hooks/useTitle';
 import { Star, TrendingUp, MessageSquare, CheckCircle2, MapPin } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/context/AuthContext';
@@ -18,6 +19,7 @@ interface RatingDist {
 }
 
 export default function DashboardOverview() {
+  useTitle('Dashboard');
   const { user } = useAuth();
   const [stats, setStats] = useState<Stats>({ total: 0, avgRating: 0, complaints: 0, resolved: 0 });
   const [ratingDist, setRatingDist] = useState<RatingDist[]>([]);

@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTitle } from '@/hooks/useTitle';
 import { Star, QrCode, TrendingUp, Shield, CheckCircle2, ArrowRight, MessageSquare, BarChart3 } from 'lucide-react';
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Sign up & add your cafe', desc: 'Create your account and add your cafe location with your Google Place ID in minutes.' },
+  { step: '01', title: 'Sign up & add your business', desc: 'Create your account and add your business location with your Google Place ID in minutes.' },
   { step: '02', title: 'Print your QR code', desc: 'Download your unique QR code and place it on tables, receipts, or counters.' },
   { step: '03', title: 'Collect smarter feedback', desc: 'Happy customers get sent to Google Reviews. Unhappy ones are captured privately so you can fix it.' },
 ];
@@ -35,6 +35,7 @@ const PRICING = [
 ];
 
 export default function Home() {
+  useTitle('Smart Feedback & Google Reviews');
   return (
     <div className="min-h-screen bg-white font-sans">
 
@@ -63,14 +64,14 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white border border-[#DADCE0] text-[#1A73E8] text-sm font-medium px-4 py-1.5 rounded-full mb-6 shadow-sm">
             <Star size={14} className="fill-[#FBBC04] text-[#FBBC04]" />
-            Trusted by cafes across India
+            Trusted by businesses across India
           </div>
           <h1 className="text-[52px] leading-[1.1] font-bold text-[#202124] mb-6 tracking-tight">
             Turn every customer into<br />
             <span className="text-[#1A73E8]">a Google Review</span>
           </h1>
           <p className="text-xl text-[#5F6368] leading-relaxed mb-10 max-w-xl mx-auto">
-            ReviewFlow helps cafes and restaurants collect feedback, boost their Google rating, and resolve complaints before they go public.
+            ReviewFlow helps businesses collect feedback, boost their Google rating, and resolve complaints before they go public.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/signup" className="flex items-center justify-center gap-2 bg-[#1A73E8] hover:bg-[#1557B0] text-white font-semibold px-8 py-4 rounded-full text-base transition shadow-lg shadow-[#1A73E8]/25">
@@ -111,7 +112,7 @@ export default function Home() {
       <section className="py-24 px-6 bg-[#F8F9FA]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-[#202124] mb-3">Built for cafes & restaurants</h2>
+            <h2 className="text-3xl font-bold text-[#202124] mb-3">Built for your business</h2>
             <p className="text-[#5F6368] text-lg">Everything you need to manage your online reputation.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-6">
@@ -166,7 +167,7 @@ export default function Home() {
       {/* Footer CTA */}
       <section className="py-20 px-6 bg-gradient-to-br from-[#1A73E8] to-[#1557B0] text-center text-white">
         <h2 className="text-3xl font-bold mb-4">Ready to grow your Google rating?</h2>
-        <p className="text-blue-100 mb-8 text-lg max-w-xl mx-auto">Join cafes already using ReviewFlow to protect their reputation and get more 5-star reviews.</p>
+        <p className="text-blue-100 mb-8 text-lg max-w-xl mx-auto">Join businesses already using ReviewFlow to protect their reputation and get more 5-star reviews.</p>
         <Link to="/signup" className="inline-flex items-center gap-2 bg-white text-[#1A73E8] font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition text-base shadow-lg">
           Get started free <ArrowRight size={18} />
         </Link>

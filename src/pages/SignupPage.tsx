@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTitle } from '@/hooks/useTitle';
 import { supabase } from '@/lib/supabase';
 import { Eye, EyeOff, Star } from 'lucide-react';
 
 export default function SignupPage() {
+  useTitle('Sign Up');
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

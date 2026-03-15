@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTitle } from '@/hooks/useTitle';
 import { useParams } from 'react-router-dom';
 import { supabase } from '@/lib/supabase';
 import { Star, CheckCircle2, ExternalLink, AlertCircle } from 'lucide-react';
@@ -11,6 +12,7 @@ type Step = 'rating' | 'positive' | 'negative' | 'success' | 'not-found';
 export default function CustomerFeedbackPage() {
   const { slug } = useParams<{ slug: string }>();
   const [location, setLocation] = useState<Location | null>(null);
+  useTitle(location?.name || 'Customer Feedback');
   const [loadingLocation, setLoadingLocation] = useState(true);
 
   const [step, setStep] = useState<Step>('rating');
@@ -284,8 +286,8 @@ export default function CustomerFeedbackPage() {
             <h2 className="text-[16px] font-medium text-[#202124]">{location?.name}</h2>
           </div>
           <div className="flex flex-col items-center text-center mb-6">
-            <div className="mb-3 animate-in zoom-in duration-500">
-              <CheckCircle2 size={28} className="text-[#34A853]" />
+            <div className="mb-4 w-12 h-12 bg-[#1A73E8] rounded-xl flex items-center justify-center animate-in zoom-in duration-500 shadow-sm">
+              <Star size={24} className="text-white fill-white" />
             </div>
             <h1 className="text-[22px] font-medium text-[#202124] mb-2">Thanks for your feedback</h1>
             <p className="text-[14px] text-[#5F6368] leading-relaxed">
