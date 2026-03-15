@@ -149,7 +149,7 @@ export default function CustomerFeedbackPage() {
   }
 
   return (
-    <div className={`min-h-screen bg-[#F8F9FA] flex flex-col items-center px-4 font-sans ${['success', 'positive'].includes(step) ? 'justify-center py-4' : 'py-8'}`}>
+    <div className={`min-h-screen bg-[#F8F9FA] flex flex-col items-center px-4 font-sans ${['success', 'positive', 'rating', 'negative'].includes(step) ? 'justify-center py-4' : 'py-8'}`}>
 
       {/* Positive → redirect to Google */}
       {step === 'positive' && (
@@ -186,7 +186,7 @@ export default function CustomerFeedbackPage() {
 
       {/* Negative → complaint form */}
       {step === 'negative' && (
-        <div className="w-full max-w-[450px] bg-white rounded-2xl shadow-sm border border-[#E8EAED] overflow-hidden">
+        <div className="w-full max-w-[450px] bg-white rounded-2xl shadow-sm border border-[#E8EAED] overflow-hidden m-auto animate-in fade-in duration-500">
           <div className="p-6">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
@@ -251,9 +251,8 @@ export default function CustomerFeedbackPage() {
 
       {/* Rating step */}
       {step === 'rating' && (
-        <div className="w-full max-w-[450px] bg-white rounded-2xl shadow-sm border border-[#E8EAED] overflow-hidden">
-          <div className="p-6">
-            <div className="flex items-center gap-4 mb-6">
+        <div className="w-full max-w-[420px] bg-white rounded-[16px] shadow-[0_2px_10px_rgba(0,0,0,0.06)] p-6 m-auto animate-in fade-in duration-500">
+          <div className="flex items-center gap-4 mb-6">
               <span className="text-[22px] text-[#202124] font-medium">{location?.name}</span>
             </div>
             <div className="flex items-center gap-3 mb-8">
@@ -276,7 +275,6 @@ export default function CustomerFeedbackPage() {
               {renderStars(rating, hoveredRating, handleRating, setHoveredRating)}
             </div>
           </div>
-        </div>
       )}
 
       {/* Success screen */}
