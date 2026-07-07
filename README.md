@@ -1,20 +1,58 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Platform-Web-blue?style=for-the-badge" />
 </div>
 
-# Run and deploy your AI Studio app
+<h1 align="center">REVIEW FLOW</h1>
 
-This contains everything you need to run your app locally.
+<p align="center">
+  <i>Review flow management system.</i>
+</p>
 
-View your app in AI Studio: https://ai.studio/apps/0252499d-b193-4f62-a7ff-92785ca052a6
+<br/>
 
-## Run Locally
+## 🎯 Overview
 
-**Prerequisites:**  Node.js
+Welcome to **review-flow**! 
+Review flow management system.
 
+This project was developed with a focus on modern web standards, performance, and responsive design.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 Getting Started
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine (if applicable to the stack).
+
+### Installation
+
+1. Clone the repo:
+   ```sh
+   git clone https://github.com/Kishan0029/review-flow.git
+   ```
+2. Navigate into the directory:
+   ```sh
+   cd review-flow
+   ```
+3. Install NPM packages:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## 👨‍💻 Developer
+
+**Kishan Revankar** 
+- [GitHub Profile](https://github.com/Kishan0029)
+- [Twitter/X](https://x.com/Kishan__29)
+- [LinkedIn](https://www.linkedin.com/in/kishanrevankar29/)
+
+---
+<div align="center">
+  <i>"Code is like humor. When you have to explain it, it’s bad." - Cory House</i>
+</div>
